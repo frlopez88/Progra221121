@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:Progra221121.ViewModels"
+             x:Class="Progra221121.MainPage">
+
+
+    <ContentPage.BindingContext>
+        <local:ViewModelCirculo></local:ViewModelCirculo>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <Label Text="Ingrese el radio de su circulo" FontSize="50" />
+        <Entry Text="{Binding Radio}" Keyboard="Numeric" ></Entry>
+
+        <Button Command="{Binding CrearCirculo}" Text="Crear Circulo" />
+
+        <Label Text="{Binding Resultado}" FontSize="25"/>
+    </StackLayout>
+
+</ContentPage>
