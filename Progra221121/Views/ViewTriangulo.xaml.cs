@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace Progra221121
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace Progra221121.Views
 {
-    public partial class MainPage : TabbedPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ViewTriangulo : ContentPage
     {
-        public MainPage()
+        public ViewTriangulo()
         {
             InitializeComponent();
         }

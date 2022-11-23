@@ -19,5 +19,10 @@ namespace Progra221121.Models
         
         }
 
+        public string toString() {
+
+            return "Figura Geometrica con Area :" + this.area + " Perimetro: " + this.perimetro;
+        }
+
     }
 }

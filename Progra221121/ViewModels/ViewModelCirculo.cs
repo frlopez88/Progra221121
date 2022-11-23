@@ -22,8 +22,7 @@ namespace Progra221121.ViewModels
                 c1.calcularPerimetro();
 
 
-                Resultado = "El circulo tiene un area de " + c1.area
-                 + " y un perimetro de " + c1.perimetro;
+                Resultado = c1.toString();
 
             });
         
