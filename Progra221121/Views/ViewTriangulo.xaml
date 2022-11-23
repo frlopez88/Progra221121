@@ -2,12 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Progra221121.Views.ViewTriangulo"
+             xmlns:local="clr-namespace:Progra221121.ViewModels"
              Title="Triangulo">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Vista de Triangulo"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <ContentPage.BindingContext>
+        <local:ViewModelTriangulo></local:ViewModelTriangulo>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <Label Text="Ingrese los Datos del Triangulo Isoceles" FontSize="50" />
+        <Entry Text="{Binding LadoA}" Keyboard="Numeric" ></Entry>
+        <Entry Text="{Binding LadoB}" Keyboard="Numeric" ></Entry>
+
+        <Button Command="{Binding crearTriangulo}" Text="Crear Cuadro" />
+
+        <Label Text="{Binding Resultado}" FontSize="25"/>
+    </StackLayout>
+
 </ContentPage>
