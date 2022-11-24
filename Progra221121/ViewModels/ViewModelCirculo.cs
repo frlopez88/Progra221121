@@ -70,6 +70,21 @@ namespace Progra221121.ViewModels
 
 
             });
+
+            LimpiarLista = new Command( ()=> {
+
+                listaCirculo = new ObservableCollection<Circulo>();
+
+                BinaryFormatter formatter = new BinaryFormatter();
+                string ruta = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),
+                    "Ciculos.aut");
+                Stream archivo = new FileStream(ruta, FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter.Serialize(archivo, listaCirculo);
+                archivo.Close();
+
+                Resultado = "";
+
+            } );
         
         }
 
@@ -106,6 +121,8 @@ namespace Progra221121.ViewModels
         public Command CrearCirculo { get; }
 
         public Command AbrirLista { get; }
+
+        public Command LimpiarLista { get; }
         
         public event PropertyChangedEventHandler PropertyChanged;
     }

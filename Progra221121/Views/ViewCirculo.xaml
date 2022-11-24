@@ -15,6 +15,7 @@
 
         <Button Command="{Binding CrearCirculo}" Text="Crear Circulo" />
         <Button Command="{Binding AbrirLista}" Text="Abrir Lista"/>
+        <Button Command="{Binding LimpiarLista}" Text="Limpiar Lista"/>
 
         <Label Text="{Binding Resultado}" FontSize="25"/>
     </StackLayout>
