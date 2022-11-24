@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Progra221121.Models
 {
+    [Serializable]
     public class Circulo : FigurasGeometricas
     {
 

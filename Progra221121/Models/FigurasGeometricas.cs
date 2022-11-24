@@ -4,6 +4,8 @@ using System.Text;
 
 namespace Progra221121.Models
 {
+    [Serializable]
+    // Si una clase es serilable significa que se puede almacenar
     public class FigurasGeometricas
     {
 
@@ -21,7 +23,8 @@ namespace Progra221121.Models
 
         public string toString() {
 
-            return "Figura Geometrica con Area :" + this.area + " Perimetro: " + this.perimetro;
+            return "Figura Geometrica con Area :" + Math.Round(this.area,2) 
+                    + " Perimetro: " + Math.Round(this.perimetro,2);
         }
 
     }

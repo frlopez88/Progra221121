@@ -14,6 +14,7 @@
         <Entry Text="{Binding Radio}" Keyboard="Numeric" ></Entry>
 
         <Button Command="{Binding CrearCirculo}" Text="Crear Circulo" />
+        <Button Command="{Binding AbrirLista}" Text="Abrir Lista"/>
 
         <Label Text="{Binding Resultado}" FontSize="25"/>
     </StackLayout>
